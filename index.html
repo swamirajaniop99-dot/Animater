@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Video Generator</title>
+<style>
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+.container{
+margin-top:50px;
+}
+
+input,button{
+padding:10px;
+margin:10px;
+border:none;
+border-radius:6px;
+}
+
+button{
+background:#22c55e;
+color:white;
+cursor:pointer;
+}
+
+video{
+margin-top:20px;
+width:400px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>AI Minecraft Video Generator</h1>
+
+<div class="container">
+
+<input type="text" id="prompt" placeholder="Enter prompt (Minecraft style)">
+<br>
+
+<input type="file" id="imageUpload">
+<br>
+
+<button onclick="generateVideo()">Generate Video</button>
+
+<p id="status"></p>
+
+<video id="videoPreview" controls></video>
+
+</div>
+
+<script>
+
+function generateVideo(){
+
+let prompt=document.getElementById("prompt").value
+
+document.getElementById("status").innerText="Generating video..."
+
+setTimeout(()=>{
+
+document.getElementById("status").innerText="Video Generated (Demo)"
+
+document.getElementById("videoPreview").src="demo.mp4"
+
+},2000)
+
+}
+
+</script>
+
+</body>
+</html>￼Enter
